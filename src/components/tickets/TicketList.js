@@ -93,7 +93,7 @@ export const TicketList = ({ searchTermState }) => {
             {
                 filteredTickets.map(filteredTicket => {
                     return <>
-                    <section className="ticket">
+                    <section className="ticket" key={`ticket--${filteredTicket.id}`}>
                         <header>{filteredTicket.description}</header>
                         <footer>Emergency: {filteredTicket.emergency ? "🧨" : "No"}</footer>
                     </section>
